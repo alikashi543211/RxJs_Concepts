@@ -1,0 +1,40 @@
+<div class="my-3">
+    <h2>DebounceTime and DistinctUntilChange</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex - 01 : <span class="text-success">DebounceTime</span></strong>
+            <br>
+            <br>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search..." #inputOne>
+                </div>
+                <p>
+                    <br>
+                    <strong>Data : </strong><strong class="text-success" *ngIf="msg1 != null">{{ msg1 }}</strong>
+                </p>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <strong>Ex - 02 : <span class="text-success">DebounceUntilChange</span> </strong>
+            <br>
+            <br>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search..." #inputTwo>
+                </div>
+                <p>
+                    <br>
+                    <strong>Data : </strong><strong class="text-success" *ngIf="msg2 != null">{{ msg2 }}</strong>
+                </p>
+            </form>
+        </div>
+    </div>
+    <br>
+</div>

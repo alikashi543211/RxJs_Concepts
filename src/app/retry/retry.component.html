@@ -1,0 +1,50 @@
+<div class="my-3">
+    <h2>Retry, RetryWhen <br>Scan and Delay</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <hr>
+            <table class="table" *ngIf="person != null">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ person.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ person.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ person.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>{{ person.address.street }}, {{ person.address.suite }}, {{ person.address.city }}, {{ person.address.zipcode }}</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>{{ person.phone }}</td>
+                    </tr>
+                    <tr>
+                        <th>Company</th>
+                        <td>{{ person.company.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary" type="button" (click)="fetchDetails()">
+                <span *ngIf="fetching" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    {{ fetching ? 'Fetching...' : 'Fetch Details' }}
+              </button>
+              <p>
+                <br>
+                Status: <strong class="{{ statusClass }}">{{ status }}
+                    <span *ngIf="fetching" class="spinner-grow text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </span>
+                </strong>
+              </p>
+        </div>
+    </div>
+    <br>
+</div>

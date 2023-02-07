@@ -1,0 +1,56 @@
+<div class="my-3">
+    <h2>SwitchMap</h2>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <br>
+            <h5>Search Uxtrendz Videos</h5>
+            <hr>
+            <br>
+            <form #searchForm="ngForm">
+                <div>
+                    <input type="text" class="form-control form-control-lg" placeholder="Search..." required name="searchTerm" ngModel autocomplete="off">
+                </div>
+            </form>
+            <br>
+            <hr>
+            <br>
+
+            <div class="results" *ngIf="searchResults">
+                <div>
+                    <h5 class="float-start">Search Results</h5>
+                    <span class="float-end text-muted">{{ searchResultsCount }} Results found..</span>
+                    <br clear="all" />
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Thumbnail</th>
+                        <th scope="col">Title & Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of searchResults; index as i">
+                        <th scope="row">{{ i }}</th>
+                        <td>
+                            <img src="{{ item.thumb }}" alt="" width="120">
+                        </td>
+                        <td>
+                            <p class="mb-0">
+                                <strong>
+                                    {{ item.title }}
+                                </strong>
+                            </p>
+                            <p>
+                                {{ item.description }}
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

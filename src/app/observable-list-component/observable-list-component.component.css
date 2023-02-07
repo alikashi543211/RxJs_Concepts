@@ -1,0 +1,10 @@
+.ancor_css{
+    cursor:pointer;
+    text-decoration: none;
+}
+.card{
+    min-height: 178px;
+}
+.card:hover{
+    background-color: rgb(238, 236, 236) !important;
+}

@@ -1,0 +1,36 @@
+<div class="my-3">
+    <h2>CatchError & ThrowError</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger" *ngIf="error"><strong>Error : </strong>{{ error }}</div>
+        </div>
+        <div class="col-md-12">
+            <hr>
+            <strong>Products : </strong> All
+            <hr>
+            <div class="row">
+                <div class="col-md-3 my-3" *ngFor="let item of productList">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ item.image_src }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="text-muted mt-3">
+                                <strong>Active :</strong> {{ item.is_active ? 'Yes' : 'No' }}
+                                    |
+                                <strong> Buy Now :</strong> {{ item.is_buy_now ? 'Yes' : 'No' }}
+                            </p>
+                            <p class="card-text">{{ item.description }}</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

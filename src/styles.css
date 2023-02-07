@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+ul.techList{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.techList li{
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 7px 13px;
+    margin-bottom: 10px;
+}
+
+ul.techList.error li{
+    color:red;
+    background-color: rgba(255, 0, 0, 0.08);
+    border-color: red;
+}
+
+ul.techList.completed li{
+    color: green;
+    background-color: rgba(61, 216, 67, 0.08);
+    border-color: green;
+}
+
+.notification {
+    background: #fff;
+    position:absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.notification .item{
+    overflow: hidden;
+}
+
+.notification .item:not(:first-child) {
+    border-top: 1px solid #f5f5f5;
+}
+
+.notification .header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 0 10px;
+}
+
+.notification .body{
+    font-size: 13px;
+    line-height: normal;
+}
+
+.notification .body .item-img{
+    float: right;
+    margin: 0 0 0 10px;
+    border: 1px solid #989898;
+}
+
+.side-big-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side-big-content div{
+    padding:40px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.side-big-content .red{
+    background-color: red;
+}
+
+.side-big-content .green{
+    background-color: green;
+}
+
+.side-big-content .blue{
+    background-color: blue;
+}
+
+.side-big-content .yellow{
+    background-color: yellow;
+}
+
+.side-big-content .violet{
+    background-color: violet;
+}
+
+.side-big-content .purple{
+    background-color: purple;
+}
+
+.side-big-content .grey{
+    background-color: grey;
+}

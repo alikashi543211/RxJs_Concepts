@@ -1,0 +1,46 @@
+<div class="my-3">
+    <h2>Pluck</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex - 01 ( Data => Pluck by property )</strong>
+            <hr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data">
+                        <td>{{ item }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <strong></strong>
+        </div>
+        <div class="col-md-6">
+            <strong>Ex - 02 ( Data => Pluck by nested property )</strong>
+            <hr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Job > Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data2">
+                        <td>{{ item }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+</div>
